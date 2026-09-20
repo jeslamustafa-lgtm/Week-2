@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean & Brew Coffee</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-amber-50 text-gray-800">
+
+    <!-- Header -->
+     <header class="bg-amber-900 text-white">
+        <nav class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row sm:justify-between gap-4 sm:items-center">
+            <h1 class="text-2xl font-bold">Bean & Brew Coffee</h1>
+            <ul class="flex gap-5 text-sm sm:text-base">
+                <li><a href="#" class="hover:text-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-full">Home</a></li>
+                <li><a href="#" class="hover:text-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-full">Menu</a></li>
+                <li><a href="#" class="hover:text-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-full">About</a></li>
+                <li><a href="#" class="hover:text-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-full">Contact</a></li>
+            </ul>
+        </nav>
+     </header>
+
+     <main>
+        <!-- Hero section -->
+        <section class="bg-amber-100 py-20">
+            <div class="max-w-6xl mx-auto px-4 text-center gap-10">
+                <h2 class="text-4xl font-bold mb-4">Welcome to Bean & Brew Coffee</h2>
+                <p class="text-gray-600 text-lg mb-8">Experience the finest coffee blends and a cozy atmosphere.</p>
+                <a href="#menu" class="inline-block bg-amber-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-800 focus:outline-none focus:ring-4 focus:ring-amber-500">Explore Our Menu</a>
+            </div>
+
+            <div class="max-w-2xl mx-auto px-4 mt-10">
+                <img src="https://img.freepik.com/free-photo/delicious-coffee-beans-cup_23-2150691429.jpg" class="w-full rounded-lg shadow-lg"
+                 alt=" cup of freshly brewed coffee">
+                class="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl shadow-lg">
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Menu section -->
+        <section id="menu" class="py-16 md:py-20 bg-amber-50">
+            <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">  
+                <p class="text-gray-600 text-lg mb-8">OUR SPECIALS</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Popular Menu</h2>
+                <!-- Menu items would go here -->
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                 <article class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl hover:translate-y-1 transition-all duration-300 text-center">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/023/788/276/small_2x/cup-of-coffee-latte-with-heart-shape-coffee-beans-on-old-wooden-background-generative-ai-photo.jpg" alt="Cappuccino" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Cappuccino</h3>
+                    <p class="text-gray-600 mb-4">A perfect blend of espresso, steamed milk, and foam.</p>
+                    <span class="text-amber-900 font-bold">₹180</span>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <img src="https://static.vecteezy.com/system/resources/previews/028/288/831/non_2x/a-professional-coffee-machine-preparing-an-espresso-coffee-in-a-glass-cup-ai-generative-free-photo.jpg" alt="Espresso" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Espresso</h3>
+                    <p class="text-gray-600 mb-4">A strong and bold coffee shot to kickstart your day.</p>
+                    <span class="text-amber-900 font-bold">₹150</span>
+                    </article>
+
+                <!-- Card 2 -->
+                <article class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl hover:translate-y-1 transition-all duration-300 text-center">
+                    <img src="https://img.freepik.com/premium-photo/iced-coffee-cafe-latte-refreshing-cold-drink-wooden-table-with-bokeh-restaurant-shop-background_880763-25781.jpg" alt="Cappuccino" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Iced latte</h3>
+
+                    <p class="text-gray-600 mb-4">Traditional Indian tea with aromatic spices.</p>
+                    <span class="text-amber-800 font-bold text-lg">₹200</span>
+                </article>
+
+
+                <!-- Card 3 -->
+                <article class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl hover:translate-y-1 transition-all duration-300 text-center">
+                    <img src="https://agreatcoffee.com/wp-content/uploads/2023/09/What-Is-An-Americano-Coffee.jpg">
+                    <h3 class="text-xl font-bold mb-2">Americano</h3>
+                    <p class="text-gray-600 mb-4">Smooth and creamy coffee with steamed milk.</p>
+                    <span class="text-amber-900 font-bold">₹190</span>
+                </article>
+
+                 </div>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section id="about" class="py-16 md:py-20 bg-amber-100">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <p class="text-gray-600 text-lg mb-8">ABOUT BEAN & BREW COFFEE</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Our Story</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.5RAATBFva2Y9DHJS8h1MQQAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Coffee beans and cup" class="w-full h-auto rounded-lg shadow-lg">
+                    </div>
+                    <div>
+                        <p class="text-gray-700 mb-4">At Bean & Brew Coffee, we are passionate about delivering the finest coffee experience. Our journey began with a love for coffee and a desire to create a welcoming space for coffee enthusiasts.</p>
+                        <p class="text-gray-700 mb-4">We source our beans from the best farms around the world, ensuring that every cup is rich in flavor and aroma. Our baristas are trained to craft each beverage with precision and care.</p>
+                        <p class="text-gray-700">Join us for a cup of coffee and immerse yourself in the cozy ambiance of Bean & Brew Coffee.</p>
+                    </div>
+                    </section>  
+
+                    <!-- Contact section -->
+                    <section id="contact" class="py-16 md:py-20 bg-amber-50">
+                        <div class="max-w-6xl mx-auto px-4">
+                            <div class="text-center mb-12">
+                                <p class="text-gray-600 text-lg mb-8">GET IN TOUCH</p>
+                                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Contact Us</h2>
+                                <p class="text-gray-700">Have questions or want to learn more? Reach out to us!</p>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                                <div>
+                                    <form action="#" method="POST" class="bg-white rounded-lg shadow-lg p-6">
+                                        <div class="mb-4">
+                                            <label for="name" class="block text-gray-700 font-semibold mb-2">Enter your Name</label>
+                                            <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-amber-500">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                                            <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-amber-500">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                                            <textarea id="message" name="message" rows="4" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-amber-500"></textarea>
+                                        </div>
+                                        <button type="submit" class="bg-amber-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-800 focus:outline-none focus:ring focus:ring-amber-500">Send Message</button>
+                                    </form>
+                                </div>
+                                <div>
+                                    <p class="text-gray-700 mb-4"><strong>Address:</strong> 123 Coffee Street, Brewtown, USA</p>
+                </div>
+            </div>
+     </main>
+     <!-- Footer -->
+      <footer class="bg-amber-900 text-white text-center py-6"> 
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2024 Bean & Brew Coffee. All rights reserved.</p>
+        </div>
+
+    
+</body>
+</html>
