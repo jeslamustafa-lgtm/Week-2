@@ -1,49 +1,354 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bean & Brew Coffee</title>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="script.js" defer></script>
+    <title>Bean & Brew | Artisan Coffee House</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased selection:bg-amber-800 selection:text-white">
 
-<bodyclass="bg-amber-50 text-gray-800">
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-stone-900/95 backdrop-blur border-b border-stone-800 text-stone-100">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between" aria-label="Main Navigation">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg p-1">
+                <span class="text-2xl font-serif font-bold tracking-wider text-amber-500 group-hover:text-amber-400 transition-colors">Bean & Brew</span>
+            </a>
 
-    <!-- HEADER with profile logo-->
-    
-        <nav class="bg-white p-4 flex justify-between items-center">
-            <h1 class=" font-bold text-xl">Bean & Brew Coffee</h1>
-            <img id="profileLogo" src="https://i.pravatar.cc/40" alt="Profile Logo" class="w-10 h-10 rounded-full cursor-pointer">
-            
-        </nav>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-amber-500 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-2 py-1">About</a>
+                <a href="#menu" class="hover:text-amber-500 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-2 py-1">Menu</a>
+                <a href="#story" class="hover:text-amber-500 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-2 py-1">Our Story</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-2 py-1">Contact</a>
+            </div>
 
-    <!-- Your Day 1 content here -->
-
-    <main class="p-6">
         
-                <h2 class="text-2xl font-bold">Welcome to Bean & Brew Town</h2>
-                <p>Your Day 1 content.....</p>
-                <a href="#menu" class="inline-block bg-amber-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-800 focus:outline-none focus:ring-4 focus:ring-amber-500">Explore Our Menu</a>
-    </main>
-    <!-- MODAL - Must be INSIDE body at the end -->
+             <!-- Action Area / Profile Logo & Order Button -->
+            <div class="flex items-center space-x-4">
+                <!-- Profile Logo Trigger -->
+                <button id="profileBtn" class="flex items-center justify-center w-10 h-10 rounded-full bg-amber-600/20 border border-amber-500/40 text-amber-400 hover:bg-amber-600 hover:text-white transition-all focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="User Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                </button>
+            <div class="hidden sm:block">
+                <a href="#menu" class="inline-flex items-center justify-center bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-stone-900 focus:ring-amber-500">
+                    Order Online
+                </a>
+            </div>
+        </nav>
+    </header>
 
-            <div id="userModal" class="hidden inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                <div class="bg-white p-6 rounded-xl  w-80">
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="font-bold">User Information</h3>
-                        <button id="closeModal" class="text-xl">&times;</button>
-                    <p id="userName">Name: Jesla Rashid</p>
-                    <p id="userEmail">Email: jesla.rashid@example.com</p>
-                    <button id="closeModal" class="bg-amber-900 text-white px-4 py-2 rounded hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-500">Close</button>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-stone-900 text-white overflow-hidden" aria-label="Hero Section">
+            <div class="absolute inset-0 opacity-40 bg-[radial-gradient(#d97706_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40 relative z-10 flex flex-col items-center text-center">
+                <span class="inline-block bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+                    Handcrafted Artisan Coffee
+                </span>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold tracking-tight max-w-4xl leading-tight mb-6">
+                    Awaken Your Senses with Every Single Sip
+                </h1>
+                <p class="text-base sm:text-lg lg:text-xl text-stone-300 max-w-2xl mb-10 leading-relaxed">
+                    Sustainably sourced, expertly roasted, and brewed to absolute perfection. Experience the finest coffee culture right in your neighborhood.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                    <a href="#menu" class="inline-flex items-center justify-center bg-amber-600 hover:bg-amber-700 text-white font-medium px-8 py-4 rounded-full shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-stone-900 focus:ring-amber-500">
+                        Explore Our Menu
+                    </a>
+                    <a href="#about" class="inline-flex items-center justify-center bg-transparent hover:bg-stone-800 text-white border border-stone-600 hover:border-stone-500 font-medium px-8 py-4 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-stone-900 focus:ring-amber-500">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Features Section -->
+        <section id="about" class="py-20 sm:py-28 bg-stone-100" aria-label="About Us">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-amber-800 mb-3">Why Choose Us</h2>
+                    <p class="text-3xl sm:text-4xl font-serif font-bold text-stone-900">Crafted with Passion & Precision</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <article class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200/60 flex flex-col items-center text-center">
+                        <div class="w-14 h-14 bg-amber-100 text-amber-800 rounded-xl flex items-center justify-center mb-6 text-2xl font-bold font-serif">
+                            01
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-stone-900 mb-3">Ethically Sourced</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            We partner directly with small-scale farmers worldwide who prioritize sustainable and fair-trade farming practices.
+                        </p>
+                    </article>
+
+                    <!-- Feature 2 -->
+                    <article class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200/60 flex flex-col items-center text-center">
+                        <div class="w-14 h-14 bg-amber-100 text-amber-800 rounded-xl flex items-center justify-center mb-6 text-2xl font-bold font-serif">
+                            02
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-stone-900 mb-3">Expertly Roasted</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Every batch is small-batch roasted in-house to bring out unique flavor notes, rich aromas, and optimal freshness.
+                        </p>
+                    </article>
+
+                    <!-- Feature 3 -->
+                    <article class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200/60 flex flex-col items-center text-center">
+                        <div class="w-14 h-14 bg-amber-100 text-amber-800 rounded-xl flex items-center justify-center mb-6 text-2xl font-bold font-serif">
+                            03
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-stone-900 mb-3">Master Baristas</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Our passionate baristas pour love and precision into every cup, ensuring an extraordinary experience every time.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-20 sm:py-28 bg-white" aria-label="Coffee Menu">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-amber-800 mb-3">Discover Our Menu</h2>
+                    <p class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mb-4">Freshly Brewed Favorites</p>
+                    <p class="text-stone-600 text-sm sm:text-base">Explore our selection of signature coffees, teas, and house-made pastries.</p>
+                </div>
+
+            <div class="grid-cols-1 gap-6 lg:gap-8 max-w-5xl mx-auto">
+                    <!-- Menu Item 1 -->
+                    <div class="flex items-center gap-4 bg-stone-50 border border-stone-200/80 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <image src="https://cdn.shopify.com/s/files/1/0086/6612/0255/files/espresso_51fc8c38-ddb2-4c1f-8de1-f4d48a09b7d5_1024x1024.jpg?v=1702637953"
+                        alt="Signature Expresso"
+                        class="w-20 h-20 rounded-xl object-cover shrink-0 border border-stone-200"></image>
+                        <div class="pr-4">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 mb-1">Signature Espresso</h3>
+                            <p class="text-sm text-stone-600">Rich, bold double shot with notes of dark chocolate and toasted caramel.</p>
+                        </div>
+                        <span class="text-lg font-bold text-amber-800 shrink-0">₹200</span>
+                    </div>
+
+                    <!-- Menu Item 2 -->
+                    <div class="flex items-center gap-4 bg-stone-50 border border-stone-200/80 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <image src="https://thumbs.dreamstime.com/b/top-view-creamy-latte-delicate-latte-art-served-bold-red-cup-wooden-table-under-warm-sunlight-latte-art-highlights-371077431.jpg"
+                        alt="Velvet Cappuccino"
+                        class="w-20 h-20 rounded-xl object-cover shrink-0 border border-stone-200"></image>
+                        <div class="pr-4">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 mb-1">Velvet Cappuccino</h3>
+                            <p class="text-sm text-stone-600">Equal parts espresso, steamed milk, and rich microfoam blanket.</p>
+                        </div>
+                        <span class="text-lg font-bold text-amber-800 shrink-0">₹220</span>
+                    </div>
+
+                    <!-- Menu Item 3 -->
+                    <div class="flex items-center gap-4 bg-stone-50 border border-stone-200/80 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <image src="https://static.vecteezy.com/system/resources/previews/076/213/144/non_2x/a-cup-of-iced-caramel-macchiato-with-layered-milk-and-coffee-clearly-defined-free-photo.jpeg"
+                        alt="Caramel Macchito"
+                        class="w-20 h-20 rounded-xl object-cover shrink-0 border border-stone-200"></image>
+                        <div class="pr-4">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 mb-1">Caramel Macchiato</h3>
+                            <p class="text-sm text-stone-600">Fresh steamed milk with vanilla syrup, marked with espresso and caramel drizzle.</p>
+                        </div>
+                        <span class="text-lg font-bold text-amber-800 shrink-0">₹240</span>
+                    </div>
+
+                    <!-- Menu Item 4 -->
+                    <div class="flex items-center gap-4 bg-stone-50 border border-stone-200/80 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <image src="https://img.freepik.com/premium-photo/artistic-nitro-cold-brew-coffee-white-background_899449-325168.jpg?w=2000"
+                        alt="Cold Brew Nitro"
+                        class="w-20 h-20 rounded-xl object-cover shrink-0 border border-stone-200"></image>
+                        <div class="pr-4">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 mb-1">Cold Brew Nitro</h3>
+                            <p class="text-sm text-stone-600">Steeped for 24 hours and infused with nitrogen for a creamy, cascading texture.</p>
+                        </div>
+                        <span class="text-lg font-bold text-amber-800 shrink-0">₹250</span>
+                    </div>
+
+                    <!-- Menu Item 5 -->
+                    <div class="flex items-center gap-4 bg-stone-50 border border-stone-200/80 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <image src="https://thumbs.dreamstime.com/b/iced-matcha-latte-served-clear-glass-wooden-table-green-tea-milk-still-life-style-373005845.jpg"
+                         alt="Matcha Green Tea Latte"
+                        class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover shrink-0 border border-stone-200"></image>
+                        <div class="pr-4">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 mb-1">Matcha Green Tea Latte</h3>
+                            
+                            <p class="text-sm text-stone-600">Premium ceremonial grade matcha whisked with velvety steamed milk.</p>
+                        </div>
+                        <span class="text-lg font-bold text-amber-800 shrink-0">₹280</span>
+                    </div>
+
+                    <!-- Menu Item 6 -->
+                    <div class="flex items-center gap-4 bg-stone-50 border border-stone-200/80 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <image src="https://static.vecteezy.com/system/resources/thumbnails/054/367/722/small_2x/almond-croissant-on-white-plate-photo.jpg"
+                         alt="Artisan Almond Croissant"
+                        class="w-20 h-20 rounded-xl object-cover shrink-0 border border-stone-200"></image>
+                        <div class="pr-4">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 mb-1">Artisan Almond Croissant</h3>
+                            <p class="text-sm text-stone-600">Flaky, buttery pastry filled with rich almond frangipane and toasted almonds.</p>
+                        </div>
+                        <span class="text-lg font-bold text-amber-800 shrink-0">₹200</span>
                     </div>
                 </div>
+            </div>
+        </section>
+
                     
 
+        <!-- Our Story Section -->
+        <section id="story" class="py-20 sm:py-28 bg-stone-900 text-white" aria-label="Our Story">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div>
+                        <span class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-amber-400 mb-3 block">Our Journey</span>
+                        <h2 class="text-3xl sm:text-5xl font-serif font-bold tracking-tight mb-6">From a Simple Bean to Your Favorite Cup</h2>
+                        <p class="text-stone-300 text-base leading-relaxed mb-6">
+                            Founded in 2018, Bean & Brew started as a humble corner shop with a single vintage roaster and a big dream. We wanted to build more than just a coffee house—we wanted to create a warm community hub where friends and creators can connect over exceptional coffee.
+                        </p>
+                        <p class="text-stone-300 text-base leading-relaxed mb-8">
+                            Today, we continue to honor traditional roasting arts while embracing modern sustainable practices. Every cup tells a story of dedication, craftsmanship, and love for the craft.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 pt-4 border-t border-stone-800">
+                            <div>
+                                <p class="text-3xl sm:text-4xl font-serif font-bold text-amber-500 mb-1">100%</p>
+                                <p class="text-sm text-stone-400">Fair Trade & Organic</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl sm:text-4xl font-serif font-bold text-amber-500 mb-1">15+</p>
+                                <p class="text-sm text-stone-400">Global Farm Partners</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-stone-800 p-8 sm:p-12 rounded-3xl border border-stone-700/60 shadow-xl flex flex-col justify-center">
+                        <h3 class="text-2xl font-serif font-bold mb-4 text-white">Visit Our Roastery Cafe</h3>
+                        <p class="text-stone-300 text-sm mb-6 leading-relaxed">
+                            Stop by our flagship location to watch our master roasters in action and smell the rich aroma of freshly roasted beans.
+                        </p>
+                        <ul class="space-y-3 text-sm text-stone-300 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="font-semibold text-amber-400 w-24">Mon - Fri:</span> 6:30 AM – 7:00 PM
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="font-semibold text-amber-400 w-24">Sat - Sun:</span> 7:30 AM – 8:00 PM
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="font-semibold text-amber-400 w-24">Location:</span> 450 Artisan Way, Brewtown
+                            </li>
+                        </ul>
+                        <a href="#contact" class="inline-flex justify-center items-center bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold py-3 px-6 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-stone-900 focus:ring-amber-500">
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                              
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 sm:py-28 bg-stone-100" aria-label="Contact Us">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-amber-800 mb-3">Get in Touch</h2>
+                    <p class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mb-4">We'd Love to Hear From You</p>
+                    <p class="text-stone-600 text-sm sm:text-base">Have questions, feedback, or want to host an event? Drop us a line below.</p>
+                </div>
 
-    
+                <div class="max-w-2xl mx-auto bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-stone-200/60">
+                    <form action="#" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-stone-700 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-stone-50 border border-stone-300 rounded-xl text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-stone-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-stone-50 border border-stone-300 rounded-xl text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-stone-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 bg-stone-50 border border-stone-300 rounded-xl text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-xl shadow transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 text-stone-400 py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div>
+                <span class="text-xl font-serif font-bold text-amber-500 block mb-1">Bean & Brew</span>
+                <p class="text-xs text-stone-500">&copy; 2026 Bean & Brew Coffee House. All rights reserved.</p>
+            </div>
+            <div class="flex items-center space-x-6 text-sm">
+                <a href="#about" class="hover:text-amber-500 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-1">About</a>
+                <a href="#menu" class="hover:text-amber-500 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-1">Menu</a>
+                <a href="#story" class="hover:text-amber-500 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-1">Story</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded px-1">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- User Profile Modal (Hidden by default) -->
+    <div id="profileModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm hidden" aria-hidden="true">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-stone-200 relative mx-4">
+            <!-- Close Button (X) -->
+            <button id="closeModalBtn" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700 w-8 h-8 rounded-full bg-stone-100 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Close Modal">
+                ✕
+            </button>
+            
+            <div class="flex flex-col items-center text-center">
+                <div class="w-20 h-20 bg-amber-100 text-amber-800 rounded-full flex items-center justify-center text-2xl font-serif font-bold mb-4 border-2 border-amber-500/30">
+                    JR
+                </div>
+                <h3 class="text-2xl font-serif font-bold text-stone-900 mb-1">Jesla Rashid</h3>
+                <p class="text-sm text-amber-800 font-medium mb-4">Coffee Connoisseur & Member</p>
+                
+                <div class="w-full bg-stone-50 rounded-2xl p-4 border border-stone-200/80 text-left space-y-2 mb-6 text-sm text-stone-600">
+                    <p><strong class="text-stone-800">Email:</strong>jeslamustafa.com</p>
+                    <p><strong class="text-stone-800">Membership Tier:</strong> Gold Bean</p>
+                    <p><strong class="text-stone-800">Favorite Drink:</strong> Velvet Cappuccino</p>
+                </div>
+
+                <button id="closeModalAction" class="w-full py-3 bg-stone-900 hover:bg-stone-800 text-white font-medium rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    Close Profile
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        const profileBtn = document.getElementById('profileBtn');
+        const profileModal = document.getElementById('profileModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const closeModalAction = document.getElementById('closeModalAction');
+
+        function openModal() {
+            profileModal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            profileModal.classList.add('hidden');
+        }
+
+        profileBtn.addEventListener('click', openModal);
+        closeModalBtn.addEventListener('click', closeModal);
+        closeModalAction.addEventListener('click', closeModal);
+
+        profileModal.addEventListener('click', (event) => {
+            if (event.target === profileModal) {
+                closeModal();
+            }
+        });
+    </script>
+
 </body>
 </html>

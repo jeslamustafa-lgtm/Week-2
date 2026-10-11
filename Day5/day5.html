@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jesla Rashid | Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        primary: '#a855f7',
+                        dark: '#0d1425',
+                        dark2: '#111a2e'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #ffffff, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .purple-gradient {
+            background: linear-gradient(135deg, #9333ea, #c084fc);
+        }
+
+        .hero-glow {
+            box-shadow:
+                0 0 40px rgba(147, 143, 150, 0.18),
+                0 0 80px rgba(74, 73, 74, 0.08);
+        }
+
+        .profile-shape {
+            border-radius: 48% 52% 55% 45% / 48% 42% 58% 52%;
+        }
+
+        .skill-card,
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover,
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(168, 85, 247, 0.12);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #a855f7;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 32px;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: all 0.7s ease;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-800">
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#0d1425]/95 backdrop-blur-md border-b border-white/10">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+        <nav class="h-16 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="#home" class="flex items-center gap-3">
+
+                <div class="text-2xl font-bold">
+                    <span class="text-purple-400">J</span>
+                    <span class="text-white">R</span>
+                </div>
+
+                <span class="text-white font-semibold text-lg">
+                    Jesla Rashid
+                </span>
+
+            </a>
+
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-9 text-sm">
+
+                <a href="#home"
+                    class="nav-link active text-purple-400">
+                    Home
+                </a>
+
+                <a href="#about"
+                   class="nav-link text-gray-300 hover:text-white">
+                    About
+                </a>
+
+                <a href="#projects"
+                   class="nav-link text-gray-300 hover:text-white">
+                    Projects
+                </a>
+
+                <a href="#skills"
+                   class="nav-link text-gray-300 hover:text-white">
+                    Skills
+                </a>
+
+                <a href="#contact"
+                   class="nav-link text-gray-300 hover:text-white">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Button -->
+            <button id="menuBtn"
+                    class="md:hidden text-white text-xl">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </nav>
+
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+             class="hidden md:hidden pb-5">
+
+            <div class="flex flex-col gap-4 text-center">
+
+                <a href="#home" class="text-purple-400">Home</a>
+
+                <a href="#about" class="text-gray-300">
+                    About
+                </a>
+
+                <a href="#projects" class="text-gray-300">
+                    Projects
+                </a>
+
+                <a href="#skills" class="text-gray-300">
+                    Skills
+                </a>
+
+                <a href="#contact" class="text-gray-300">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section id="home"
+         class="min-h-[650px] bg-[#0d1425] text-white pt-28 pb-16 relative overflow-hidden">
+
+    <!-- Background glow -->
+    <div class="absolute -right-40 top-20 w-96 h-96
+                bg-purple-600/10 rounded-full blur-3xl">
+    </div>
+
+    <div class="absolute left-0 bottom-0 w-80 h-80
+                bg-purple-600/5 rounded-full blur-3xl">
+    </div>
+
+
+    <div class="max-w-6xl mx-auto px-6">
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+
+
+            <!-- LEFT -->
+            <div class="fade-in">
+
+                <p class="text-purple-400 tracking-widest
+                          text-sm font-semibold mb-3">
+                    HELLO, I'M
+                </p>
+
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+
+                    Jesla
+                    <span class="text-purple-500">
+                        Rashid
+                    </span>
+
+                </h1>
+
+                <h2 class="text-xl md:text-2xl
+                           text-gray-200 mt-3">
+
+                    Web Developer
+                    <span class="text-purple-400">|</span>
+                    Coder
+                    <span class="text-purple-400">|</span>
+                    Learner
+
+                </h2>
+
+<p class="text-gray-300 max-w-xl
+                          mt-5 leading-7">
+
+                    I'm a passionate and curious web developer
+                    who loves building beautiful and functional
+                    websites. I enjoy turning ideas into real
+                    projects and continuously learning new
+                    technologies.
+
+                </p>
+
+
+                <!-- Buttons -->
+                <div class="flex flex-wrap gap-4 mt-7">
+
+                    <a href="#contact"
+                       class="purple-gradient px-6 py-3
+                              rounded-full font-medium
+                              hover:scale-105 transition">
+
+                        <i class="fa-solid fa-download mr-2"></i>
+
+                        Download Resume
+
+                    </a>
+
+
+                    <a href="#projects"
+                       class="border border-gray-500
+                              px-6 py-3 rounded-full
+                              hover:border-purple-400
+                              hover:text-purple-400
+                              transition">
+
+                        View My Projects
+
+                    </a>
+
+                </div>
+
+
+                <!-- Social -->
+                <div class="flex gap-6 mt-7 text-xl">
+
+                    <a href="#"
+                       class="hover:text-purple-400 transition">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="#"
+                       class="hover:text-purple-400 transition">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                    <a href="#"
+                       class="hover:text-purple-400 transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="mailto:jeslarashid@email.com"
+                       class="hover:text-purple-400 transition">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT PROFILE -->
+            <div class="flex justify-center items-center fade-in">
+
+                <div class="relative w-[330px] h-[330px] md:w-[390px] md:h-[390px]">
+
+                    <!-- Purple decorative circle -->
+                    <div class="absolute right-0 bottom-5
+                                w-40 h-40 rounded-full
+                                bg-purple-600/70 blur-sm">
+                    </div>
+
+                    <!-- Decorative ring -->
+                    <div class="absolute -left-8 top-20
+                                w-36 h-36 rounded-full
+                                border-2 border-purple-500
+                                opacity-60">
+                    </div>
+
+
+                    <!-- Main image background -->
+                    <div class="absolute inset-5
+                                bg-[#f1eee9]
+                                profile-shape
+                                overflow-hidden
+                                hero-glow">
+
+                        <!-- Replace profile.jpg with your photo -->
+                        <img src="./assets/JR.jpg"
+                             alt="Jesla Rashid"
+                             class="w-full h-full object-cover">
+
+                    </div>
+
+
+                    <!-- Decorative lines -->
+                    <div class="absolute left-0 top-14
+                                text-purple-500 text-4xl">
+                        <span>〰</span>
+                    </div>
+
+                    <div class="absolute right-0 top-10
+                                text-purple-500 text-3xl">
+                        ✦
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about"
+         class="py-20 bg-white">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+        <div class="grid lg:grid-cols-3 gap-12 items-center">
+
+
+            <!-- About text -->
+            <div class="lg:col-span-1 fade-in">
+
+                <div class="flex items-center gap-3 mb-3">
+
+                    <span class="w-6 h-[2px] bg-purple-500"></span>
+
+                    <span class="text-purple-500 text-sm font-semibold">
+                        ABOUT ME
+                    </span>
+
+                </div>
+
+
+                <h2 class="text-3xl font-bold leading-tight">
+
+                    Turning Ideas Into
+
+                    <span class="text-purple-500">
+                        Digital Reality
+                    </span>
+
+                </h2>
+
+
+                <p class="text-gray-600 mt-5 leading-7">
+
+                    I'm a web developer with a strong interest
+                    in front-end development. I love creating
+                    clean, responsive and user-friendly web
+                    pages. I'm always eager to learn, improve
+                    my skills and take on new challenges.
+
+                </p>
+
+
+                <a href="#contact"
+                   class="inline-block mt-6
+                          border border-purple-400
+                          text-purple-600 px-5 py-2
+                          rounded-full
+                          hover:bg-purple-500
+                          hover:text-white transition">
+
+                    More About Me
+                    <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- Details -->
+            <div class="space-y-6 fade-in">
+
+                <div class="flex items-center gap-4">
+
+                    <div class="w-12 h-12 rounded-full
+                                bg-purple-50 flex items-center
+                                justify-center text-purple-500">
+
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+
+                    <div>
+
+                        <p class="text-xs font-semibold text-gray-500">
+                            Name
+                        </p>
+
+                        <p class="font-medium">
+                            Jesla Rashid
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="flex items-center gap-4">
+
+                    <div class="w-12 h-12 rounded-full
+                                bg-purple-50 flex items-center
+                                justify-center text-purple-500">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                    </div>
+
+                    <div>
+
+                        <p class="text-xs font-semibold text-gray-500">
+                            Email
+                        </p>
+
+                        <p class="font-medium">
+                            jeslarashid@email.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="flex items-center gap-4">
+
+                    <div class="w-12 h-12 rounded-full
+                                bg-purple-50 flex items-center
+                                justify-center text-purple-500">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+                    <div>
+
+                        <p class="text-xs font-semibold text-gray-500">
+                            Location
+                        </p>
+
+                        <p class="font-medium">
+                            Kannur, Kerala, India
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="flex items-center gap-4">
+
+                    <div class="w-12 h-12 rounded-full
+                                bg-purple-50 flex items-center
+                                justify-center text-purple-500">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+                    <div>
+
+                        <p class="text-xs font-semibold text-gray-500">
+                            Education
+                        </p>
+
+                        <p class="font-medium">
+                            Bsc Microbiology
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Quote -->
+            <div class="fade-in">
+
+                <div class="bg-purple-50 rounded-xl
+                            p-8 min-h-[170px]
+                            flex flex-col justify-between">
+
+                    <i class="fa-solid fa-quote-left
+                              text-3xl text-purple-500">
+                    </i>
+
+                    <p class="italic text-gray-600 text-lg">
+
+                        "Small steps every day
+                        lead to big results."
+
+                    </p>
+
+                    <div class="text-purple-600 text-center">
+                        ♥️
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SKILLS
+========================================================= -->
+
+<section id="skills"
+         class="py-14 bg-[#f7f7ff]">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+        <div class="flex items-center gap-3 mb-3">
+
+            <span class="w-6 h-[2px] bg-purple-500"></span>
+
+            <span class="text-purple-500 text-sm font-semibold">
+                MY SKILLS
+            </span>
+
+        </div>
+
+
+        <h2 class="text-2xl md:text-3xl font-bold">
+            Tools & Technologies I Use
+        </h2>
+
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6
+                    gap-4 mt-8">
+
+
+            <!-- HTML -->
+            <div class="skill-card bg-white rounded-lg p-5
+                        flex items-center gap-3 shadow-sm">
+
+                <i class="fa-brands fa-html5 text-3xl text-orange-500"></i>
+
+                <span class="font-medium">
+                    HTML
+                </span>
+
+            </div>
+
+
+            <!-- CSS -->
+            <div class="skill-card bg-white rounded-lg p-5
+                        flex items-center gap-3 shadow-sm">
+
+                <i class="fa-brands fa-css3-alt text-3xl text-blue-500"></i>
+
+                <span class="font-medium">
+                    CSS
+                </span>
+
+            </div>
+
+
+            <!-- Tailwind -->
+            <div class="skill-card bg-white rounded-lg p-5
+                        flex items-center gap-3 shadow-sm">
+
+                <i class="fa-solid fa-wind text-2xl text-cyan-500"></i>
+
+                <span class="font-medium">
+                    Tailwind CSS
+                </span>
+
+            </div>
+
+
+            <!-- JavaScript -->
+            <div class="skill-card bg-white rounded-lg p-5
+                        flex items-center gap-3 shadow-sm">
+
+                <i class="fa-brands fa-js text-3xl text-yellow-500"></i>
+
+                <span class="font-medium">
+                    JavaScript
+                </span>
+
+            </div>
+
+
+            <!-- VS Code -->
+            <div class="skill-card bg-white rounded-lg p-5
+                        flex items-center gap-3 shadow-sm">
+
+                <i class="fa-solid fa-code text-2xl text-blue-500"></i>
+
+                <span class="font-medium">
+                    VS Code
+                </span>
+
+            </div>
+
+
+            <!-- Git -->
+            <div class="skill-card bg-white rounded-lg p-5
+                        flex items-center gap-3 shadow-sm">
+
+                <i class="fa-brands fa-git-alt text-3xl text-orange-600"></i>
+
+                <span class="font-medium">
+                    Git & GitHub
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
+
+<section id="projects"
+         class="py-20 bg-white">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+        <div class="flex justify-between items-end mb-8">
+
+            <div>
+
+                <div class="flex items-center gap-3 mb-3">
+
+                    <span class="w-6 h-[2px] bg-purple-500"></span>
+
+                    <span class="text-purple-500 text-sm font-semibold">
+                        MY PROJECTS
+                    </span>
+
+                </div>
+
+                <h2 class="text-3xl font-bold">
+                    Some of My Work
+                </h2>
+
+            </div>
+
+
+            <a href="#"
+               class="hidden md:block text-purple-600
+                      text-sm font-medium">
+
+                View All Projects
+                <i class="fa-solid fa-arrow-right ml-1"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+
+            <!-- Project 1 -->
+            <div class="project-card rounded-xl border
+                        border-gray-200 overflow-hidden bg-white">
+
+                <div class="h-32 bg-cover bg-center"
+                     style="background-image:
+                     url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80');">
+                </div>
+
+                <div class="p-5">
+
+                    <h3 class="font-semibold text-lg">
+                         Coffee Webpage
+                    </h3>
+
+                    <p class="text-gray-500 text-sm mt-2">
+                        A responsive coffee shop website
+                        using HTML & Tailwind CSS.
+                    </p>
+
+                    <a href="../Day1/day-1.html" target="_blank"
+   class="mt-4 inline-block bg-purple-600 text-white px-5 py-2 rounded-full text-sm hover:bg-purple-700 transition-colors">
+    View Project
+</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Project 2 -->
+            <div class="project-card rounded-xl border
+                        border-gray-200 overflow-hidden bg-white">
+
+                <div class="h-32 bg-cover bg-center"
+                     style="background-image:
+                     url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80');">
+                </div>
+
+                <div class="p-5">
+
+                    <h3 class="font-semibold text-lg">
+                        Escape to Kashmir
+                    </h3>
+
+                    <p class="text-gray-500 text-sm mt-2">
+                        A travel booking website with FAQ
+                        section and user profile.
+                    </p>
+
+                    
+                    <a href="../Day4/day4.html" target="_blank"
+   class="mt-4 inline-block bg-purple-600 text-white px-5 py-2 rounded-full text-sm hover:bg-purple-700 transition-colors">
+    View Project
+</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Project 3 -->
+            <div class="project-card rounded-xl border
+                        border-gray-200 overflow-hidden bg-white">
+
+                <div class="h-32 bg-[#0d1425]
+                            flex items-center justify-center">
+
+                    <div class="text-center text-white">
+
+                        <div class="text-purple-400
+                                    font-bold text-xl">
+                            My Portfolio
+                        </div>
+
+                        <div class="text-xs text-gray-400 mt-2">
+                            HTML • CSS • JavaScript
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-5">
+
+                    <h3 class="font-semibold text-lg">
+                        Personal Portfolio
+                    </h3>
+
+                    <p class="text-gray-500 text-sm mt-2">
+                        A simple and clean portfolio website
+                        using HTML, CSS and responsive design.
+                    </p>
+
+                    <button
+                        onclick="showProject('Personal Portfolio')"
+                        class="mt-4 bg-purple-600 text-white
+                               px-5 py-2 rounded-full text-sm
+                               hover:bg-purple-700">
+
+                        View Project
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact"
+         class="bg-[#0d1425] text-white py-16">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+        <div class="grid md:grid-cols-3 gap-12">
+
+
+            <!-- Contact intro -->
+            <div>
+
+                <div class="flex items-center gap-3 mb-3">
+
+                    <span class="w-6 h-[2px] bg-purple-500"></span>
+
+                    <span class="text-purple-400 text-sm font-semibold">
+                        GET IN TOUCH
+                    </span>
+
+                </div>
+
+
+                <h2 class="text-3xl font-bold">
+
+                    Let's Work
+                    <span class="text-purple-500">
+                        Together
+                    </span>
+
+                </h2>
+
+
+                <p class="text-gray-400 mt-4 text-sm">
+
+                    Have a project in mind or just want to
+                    say hello? Feel free to reach out!
+
+                </p>
+
+            </div>
+
+
+            <!-- Contact information -->
+            <div class="space-y-5">
+
+                <div class="flex items-center gap-4">
+
+                    <i class="fa-solid fa-envelope
+                              text-purple-400"></i>
+
+                    <span class="text-sm">
+                        jeslarashid@email.com
+                    </span>
+
+                </div>
+
+
+                <div class="flex items-center gap-4">
+
+                    <i class="fa-solid fa-location-dot
+                              text-purple-400"></i>
+
+                    <span class="text-sm">
+                        Kannur, Kerala, India
+                    </span>
+
+                </div>
+
+
+                <div class="flex items-center gap-4">
+
+                    <i class="fa-solid fa-phone
+                              text-purple-400"></i>
+
+                    <span class="text-sm">
+                        +91 9746206936
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Contact form -->
+            <form id="contactForm"
+                  class="space-y-3">
+
+                <div class="grid grid-cols-2 gap-3">
+
+                    <input
+                        id="name"
+                        type="text"
+                        placeholder="Your Name"
+                        required
+                        class="w-full bg-[#111a2e]
+                               border border-gray-600
+                               rounded-lg px-4 py-3
+                               text-sm outline-none
+                               focus:border-purple-500">
+
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="Your Email"
+                        required
+                        class="w-full bg-[#111a2e]
+                               border border-gray-600
+                               rounded-lg px-4 py-3
+                               text-sm outline-none
+                               focus:border-purple-500">
+
+                </div>
+
+
+                <textarea
+                    id="message"
+                    rows="3"
+                    placeholder="Your Message"
+                    required
+                    class="w-full bg-[#111a2e]
+                           border border-gray-600
+                           rounded-lg px-4 py-3
+                           text-sm outline-none
+                           focus:border-purple-500">
+                </textarea>
+
+
+                <button
+                    type="submit"
+                    class="purple-gradient w-full
+                           py-3 rounded-full
+                           font-medium
+                           hover:scale-[1.02]
+                           transition">
+
+                    <i class="fa-solid fa-paper-plane mr-2"></i>
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="bg-[#0d1425]
+               border-t border-gray-800
+               text-gray-400">
+
+    <div class="max-w-6xl mx-auto px-6 py-4
+                flex flex-col md:flex-row
+                justify-between items-center gap-3">
+
+        <p class="text-xs">
+
+            © 2026 Jesla Rashid.
+            All rights reserved.
+
+        </p>
+
+
+        <div class="flex gap-5 text-sm">
+
+            <a href="#home" class="hover:text-purple-400">
+                Home
+            </a>
+
+            <a href="#about" class="hover:text-purple-400">
+                About
+            </a>
+
+            <a href="#projects" class="hover:text-purple-400">
+                Projects
+            </a>
+
+            <a href="#skills" class="hover:text-purple-400">
+                Skills
+            </a>
+
+            <a href="#contact" class="hover:text-purple-400">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="flex gap-4">
+
+            <a href="#" class="hover:text-purple-400">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#" class="hover:text-purple-400">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="#" class="hover:text-purple-400">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="mailto:jeslarashid@email.com"
+               class="hover:text-purple-400">
+
+                <i class="fa-solid fa-envelope"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    // Mobile menu
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+
+        mobileMenu.classList.toggle("hidden");
+
+        const icon = menuBtn.querySelector("i");
+
+        if (mobileMenu.classList.contains("hidden")) {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+        } else {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+        }
+
+    });
+
+
+    // Close mobile menu after clicking
+    document.querySelectorAll("#mobileMenu a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mobileMenu.classList.add("hidden");
+
+            const icon = menuBtn.querySelector("i");
+
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+
+        });
+
+    });
+
+
+    // Project button
+    function showProject(projectName) {
+
+        alert(
+            "You selected: " +
+            projectName +
+            "\n\nProject page can be connected here."
+        );
+
+    }
+
+
+    // Contact form
+    const contactForm = document.getElementById("contactForm");
+
+    contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+
+        alert(
+            "Thank you, " +
+            name +
+            "!\nYour message has been received."
+        );
+
+        contactForm.reset();
+
+    });
+
+
+    // Scroll reveal animation
+    const observer = new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+
+    document.querySelectorAll(".fade-in").forEach(element => {
+        observer.observe(element);
+    });
+
+
+    // Active navbar item
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const sectionTop = section.offsetTop - 150;
+
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute("id");
+            }
+
+        });
+
+
+        navLinks.forEach(link => {
+
+            link.classList.remove(
+                "active",
+                "text-purple-400"
+            );
+
+            link.classList.add("text-gray-300");
+
+            if (link.getAttribute("href") === "#" + current) {
+
+                link.classList.add(
+                    "active",
+                    "text-purple-400"
+                );
+
+                link.classList.remove("text-gray-300");
+
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
